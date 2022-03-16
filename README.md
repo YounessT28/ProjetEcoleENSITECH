@@ -1,6 +1,6 @@
-# Spring MVC with SpringBoot
+# Projet Ecole ENSITECH
 _____________________________________
-Mise en oeuvre de Spring MVC avec Spring Boot
+Création d'un logiciel de gestion d'établissement scolaire
 
 # Pages
 _________________________________
@@ -8,11 +8,17 @@ _________________________________
 L'appli regroupe 3 page simple :
 - Page de connexion
 - Page d'inscription
-- Page de profil (affichant les éléments de connexion de la personne connecté)
+- Page de création d'un étudiant
+- Page de liste d'étudiants
 
-![img](images/connexion.png)
-![img](images/inscription.png)
-![img](images/profil.png)
+# Conception
+_________________________________
+
+Tous les diagrammes demandées se trouve dans le dossier Diagrammes
+- Diagramme de cas d'utilisation
+- Diagramme de classe
+- Diagramme de séquence
+- Diagramme d'activités
 
 # Conteneurisation de l'application avec Docker
 _________________________________
@@ -30,7 +36,7 @@ Il éxécute ensuite les commandes suivante :
 - mvn clean package
 
 Enfin, il éxécute le fichier jar généré via la commande : 
-- java -jar login-0.0.1-SNAPSHOT.jar
+- java -jar projetecoleensitech-0.0.1-SNAPSHOT.jar
 
 ## Docker-compose
 
@@ -43,15 +49,11 @@ _________________________________
 
 Prérequis : Avoir git et docker installé 
 
-Dans un premier temps, clonez ce repo : git clone https://github.com/YounessT28/LoginSpring.git
+Dans un premier temps, clonez ce repo : git clone https://github.com/YounessT28/ProjetEcoleENSITECH.git
 
 Ouvrez ensuite un terminal bash dans le dossier du repo cloné et éxécutez les commande suivante : 
 - docker-compose build
 - docker-compose up
 
 Patientez un peu et tapez sur votre navigateur : http://127.0.0.1/
-
-La page de connexion s'affiche !
-
-Retrouvez l'image qui a été créé sur Docker Hub : https://hub.docker.com/r/younesst/loginspring
 
