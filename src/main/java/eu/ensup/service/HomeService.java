@@ -5,6 +5,8 @@ import eu.ensup.domaine.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class HomeService {
 
@@ -23,6 +25,11 @@ public class HomeService {
     // Connexion
     public Student findStudent(Student student){
         return this.studentRepository.findByMailAndPassword(student.getMail(), student.getPassword());
+    }
+
+    // Get all Student
+    public List<Student> fintAllStudent(){
+        return this.studentRepository.findByRole("student");
     }
 
 }

@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class HomeController {
 
@@ -21,6 +23,12 @@ public class HomeController {
         model.addAttribute("user", user);*/
         model.addAttribute("student", new Student());
         return "index";
+    }
+
+    @GetMapping("/home")
+    public String homepage(Student student, Model model){
+        model.addAttribute("student", student);
+        return "home";
     }
 
     @PostMapping("/signin")
@@ -53,6 +61,22 @@ public class HomeController {
     @GetMapping("/createstudentpage")
     public String createstudentpage(Student student,Model model){
         model.addAttribute("student", new Student());
+
+        return "studentpage";
+    }
+
+    @PostMapping("createstudent")
+    public String createstudent(Student student, Model model){
+        homeService.create(student);
+        model.addAttribute("message", "L'étudiant a été créé");
+        return "home";
+    }
+
+    @GetMapping("/liststudent")
+    public String liststudent(Student student, Model model){
+        List<Student> studentList = homeService.fintAllStudent();
+        model.addAttribute("student", new Student());
+        model.addAttribute("studentlist", studentList);
         return "liststudent";
     }
 

@@ -1,5 +1,7 @@
 package eu.ensup.domaine;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
@@ -7,17 +9,20 @@ import javax.persistence.MappedSuperclass;
 public class Entite {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
     private String surname;
     private String mail;
     private String address;
-    private String phoneNumber;
+    private String phone;
+    private String role;
 
-    public Entite(int id, String surname, String mailAddress, String address, String phoneNumber) {
+    public Entite(int id, String surname, String mail, String address, String phone, String role) {
         this.surname = surname;
-        this.mail = mailAddress;
+        this.mail = mail;
         this.address = address;
-        this.phoneNumber = phoneNumber;
+        this.phone = phone;
+        this.role = role;
     }
 
     public Entite() {
@@ -56,11 +61,19 @@ public class Entite {
         this.address = address;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

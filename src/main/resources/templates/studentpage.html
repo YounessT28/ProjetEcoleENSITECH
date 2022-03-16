@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Création d'un étudiant</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+        <!-- Message -->
+        <div class="fadeIn first">
+            <h3>Création d'un étudiant</h3>
+        </div>
+        <!-- Create Student Form -->
+        <form th:action="@{/createstudent}" method="post" th:object="${student}">
+            <input type="text" id="surname" class="fadeIn second" name="surname" placeholder="nom" th:field="*{surname}">
+            <input type="text" id="firstname" class="fadeIn second" name="firstname" placeholder="prénom" th:field="*{firstname}">
+            <input type="text" id="mail" class="fadeIn second" name="mail" placeholder="mail" th:field="*{mail}">
+            <input type="text" id="address" class="fadeIn second" name="address" placeholder="adresse" th:field="*{address}">
+            <input type="text" id="phone" class="fadeIn second" name="phone" placeholder="téléphone" th:field="*{phone}">
+            <input type="text" id="dateofbirth" class="fadeIn second" name="dateofbirth" placeholder="date de naissance" th:field="*{dateofbirth}">
+            <input type="text" id="role" class="fadeIn second" name="mail" placeholder="role" th:field="*{role}">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="mot de passe" th:field="*{password}">
+            <input type="submit" class="fadeIn fourth" value="Inscription">
+        </form>
+
+        <!-- Inscription -->
+        <div id="formFooter">
+            <a class="underlineHover" th:href="@{/home}">Retour</a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

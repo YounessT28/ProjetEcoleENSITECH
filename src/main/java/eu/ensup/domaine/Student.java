@@ -4,22 +4,22 @@ import javax.persistence.Entity;
 
 @Entity
 public class Student extends Person{
-    private String dateOfBirth;
+    private String dateofbirth;
 
     public Student(){
         super();
     }
 
-    public Student(int id, String surname, String mailAddress, String address, String phoneNumber, String firstname, String password, String dateOfBirth) {
-        super(id, surname, mailAddress, address, phoneNumber, firstname, password);
-        this.dateOfBirth = dateOfBirth;
+    public Student(int id, String surname, String mail, String address, String phone, String role, String firstname, String password, String dateofbirth) {
+        super(id, surname, mail, address, phone, role, firstname, password);
+        this.dateofbirth = dateofbirth;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
+    public String getDateofbirth() {
+        return dateofbirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setDateofbirth(String dateofbirth) {
+        this.dateofbirth = dateofbirth;
     }
 }

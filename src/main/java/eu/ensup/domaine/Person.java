@@ -8,8 +8,8 @@ public class Person extends Entite {
     private String firstname;
     private String password;
 
-    public Person(int id, String surname, String mailAddress, String address, String phoneNumber, String firstname, String password) {
-        super(id, surname, mailAddress, address, phoneNumber);
+    public Person(int id, String surname, String mail, String address, String phone, String role, String firstname, String password) {
+        super(id, surname, mail, address, phone, role);
         this.firstname = firstname;
         this.password = password;
     }

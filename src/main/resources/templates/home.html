@@ -16,15 +16,11 @@
         <div class="fadeIn first">
             <h3>Menu</h3>
         </div>
-        <!--
-        <p>E-mail</p>
-        <input type="text" id="login" class="fadeIn second" name="mail" placeholder="mail" th:value="${student.mail}" disabled="true">
-        <p>Mot de passe</p>
-        <input type="text" id="password" class="fadeIn third" name="password" placeholder="password" th:value="${student.password}" disabled="true">
-        <input type="submit" class="fadeIn fourth" value="Inscription">
-        -->
-        <a class="underlineHover" class="fadeIn fourth" th:href="@{/createstudentpage}">Créer un étudiant</a>
-        <a class="underlineHover" class="fadeIn fourth" th:href="@{/liststudent}">Liste des étudiants</a>
+        <div style="display:flex; flex-direction:column;">
+            <a class="fadeIn fourth" th:href="@{/createstudentpage}">Créer un étudiant</a>
+            <a class="fadeIn fourth" th:href="@{/liststudent}">Liste des étudiants</a>
+            <div th:if="${message}"> [[${message}]] </div>
+        </div>
         <!-- Inscription -->
         <div id="formFooter">
             <a class="underlineHover" th:href="@{/}">Déconnexion</a>
