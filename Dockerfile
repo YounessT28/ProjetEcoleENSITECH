@@ -5,4 +5,4 @@ WORKDIR ./data
 RUN mvn clean package -DskipTests=true
 EXPOSE 80
 WORKDIR ./target
-CMD ["java", "-jar", "login-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "projetecoleensitech-0.0.1-SNAPSHOT.jar"]
