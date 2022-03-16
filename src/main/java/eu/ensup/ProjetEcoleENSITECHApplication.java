@@ -1,13 +1,14 @@
-package eu.ensup.login;
+package eu.ensup;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
-public class LoginApplication {
+public class ProjetEcoleENSITECHApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LoginApplication.class, args);
+		SpringApplication.run(ProjetEcoleENSITECHApplication.class, args);
 	}
 
 }
